@@ -1,0 +1,1 @@
+document.querySelector(".random-div").textContent="Hello!";
