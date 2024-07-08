@@ -5,26 +5,31 @@ This is a learning application that shows the weather forecast for a specified c
 ## Installation
 
 Clone the repository:
-...
+
+```
 git clone https://github.com/DenVIII/weather-app
-...
+```
 
 Go to the project directory:
-...
+
+```
 cd weather-app
-...
+```
 
 Install dependencies:
-...
+
+```
 npm install
-...
+```
 
 ## Usage
 
 Start the application:
-...
+
+```
 npm start
-...
+```
+
 Go to http://localhost:3000 to see the weather forecast.
 
 ## Development
@@ -35,13 +40,13 @@ To make changes to the code, follow these steps:
 2. Make the necessary changes.
 3. Save the changes.
 4. Build the project:
-   ...
+   ```
    npm run build
-   ...
+   ```
 5. Start the application:
-   ...
+   ```
    npm start
-   ...
+   ```
 
 ## Contributors
 
