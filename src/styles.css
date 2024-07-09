@@ -1,0 +1,83 @@
+:root {
+  --main-color: #82b7df;
+  --text-color: #1e1f1d;
+  --white-text: white;
+  --accent-color: #ea2b1f;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border-collapse: collapse;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  list-style: none;
+}
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--main-color);
+}
+
+nav * {
+  color: var(--white-text);
+  font-size: 1.2rem;
+}
+
+nav > div {
+  width: 250px;
+  max-width: 250px;
+  max-height: 75px;
+  padding: 5px 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-text {
+  font-weight: bold;
+
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.location-city,
+.location-descr {
+  text-align: center;
+}
+
+.location-city {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.measurment > *.active {
+  font-size: 1.8rem;
+}
+
+.divider {
+  display: inline;
+}

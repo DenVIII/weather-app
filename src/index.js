@@ -1,4 +1,7 @@
+import { renderCurrentForecast } from "./js/render"
 import { getForecast } from "./js/weather-api"
+import "./styles.css"
+import "./assets/cloudy-day.png"
 
 const randomDiv = document.querySelector(".random-div")
 randomDiv.textContent = "Hello!"
@@ -14,3 +17,5 @@ console.log(
 ) */
 
 getForecast().then(console.log)
+
+renderCurrentForecast()
