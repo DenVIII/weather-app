@@ -1,1 +1,1 @@
-document.querySelector(".random-div").textContent="Hello!";
+(()=>{"use strict";document.querySelector(".random-div").textContent="Hello!",async function(t="https://api.weatherapi.com/v1/forecast.json?key=d774c4dd991f41beb38162439243006&q=Hamburg&days=3"){const e=await fetch(t,{mode:"cors"});return await e.json()}().then(console.log)})();
