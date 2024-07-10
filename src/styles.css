@@ -36,7 +36,7 @@ nav > div {
   width: 250px;
   max-width: 250px;
   max-height: 75px;
-  padding: 5px 20px;
+  padding: 5px 40px;
 }
 
 a {
@@ -45,6 +45,7 @@ a {
 
 .logo {
   display: flex;
+  align-items: center;
 }
 
 .logo-img {
@@ -75,8 +76,19 @@ a {
   font-weight: bold;
 }
 
-.measurment > *.active {
+.measurment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.measurment > .container > *.active {
   font-size: 1.8rem;
+}
+
+.measurment.icon {
+  width: 50px;
+  height: 50px;
 }
 
 .divider {
