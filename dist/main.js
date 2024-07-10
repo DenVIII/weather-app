@@ -16,7 +16,7 @@
   \**************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `:root {\n  --main-color: #82b7df;\n  --text-color: #1e1f1d;\n  --white-text: white;\n  --accent-color: #ea2b1f;\n}\n\n*,\n::after,\n::before {\n  box-sizing: border-box;\n  border-collapse: collapse;\n  color: var(--text-color);\n  margin: 0;\n  padding: 0;\n  -webkit-transition: 0.2s;\n  transition: 0.2s;\n  list-style: none;\n}\n\n/* Navbar */\n\nnav {\n  display: flex;\n  justify-content: space-between;\n  background-color: var(--main-color);\n}\n\nnav * {\n  color: var(--white-text);\n  font-size: 1.2rem;\n}\n\nnav > div {\n  width: 250px;\n  max-width: 250px;\n  max-height: 75px;\n  padding: 5px 20px;\n}\n\na {\n  text-decoration: none;\n}\n\n.logo {\n  display: flex;\n}\n\n.logo-img {\n  width: 50px;\n  height: 50px;\n}\n\n.logo-text {\n  font-weight: bold;\n\n  text-transform: uppercase;\n  font-size: 1.8rem;\n}\n\n.location {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n\n.location-city,\n.location-descr {\n  text-align: center;\n}\n\n.location-city {\n  font-size: 1.8rem;\n  font-weight: bold;\n}\n\n.measurment > *.active {\n  font-size: 1.8rem;\n}\n\n.divider {\n  display: inline;\n}\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://weather-app/./src/styles.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `:root {\n  --main-color: #82b7df;\n  --text-color: #1e1f1d;\n  --white-text: white;\n  --accent-color: #ea2b1f;\n}\n\n*,\n::after,\n::before {\n  box-sizing: border-box;\n  border-collapse: collapse;\n  color: var(--text-color);\n  margin: 0;\n  padding: 0;\n  -webkit-transition: 0.2s;\n  transition: 0.2s;\n  list-style: none;\n  font-family: \"Noto Sans\";\n}\n\n/* Navbar */\n\nnav {\n  display: flex;\n  justify-content: space-between;\n  background-color: var(--main-color);\n}\n\nnav * {\n  color: var(--white-text);\n  font-size: 1.2rem;\n}\n\nnav > div {\n  width: 250px;\n  max-width: 250px;\n  max-height: 75px;\n  padding: 5px 20px;\n}\n\na {\n  text-decoration: none;\n}\n\n.logo {\n  display: flex;\n}\n\n.logo-img {\n  width: 50px;\n  height: 50px;\n}\n\n.logo-text {\n  font-weight: bold;\n\n  text-transform: uppercase;\n  font-size: 1.8rem;\n}\n\n.location {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n\n.location-city,\n.location-descr {\n  text-align: center;\n}\n\n.location-city {\n  font-size: 1.8rem;\n  font-weight: bold;\n}\n\n.measurment > *.active {\n  font-size: 1.8rem;\n}\n\n.divider {\n  display: inline;\n}\n\n/* Todays forecast */\n\n.wrapper {\n  display: flex;\n  justify-content: center;\n  align-items: end;\n  gap: 15px;\n}\n\n.today-forecast {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding: 50px 70px;\n  margin: 0 auto;\n  margin-top: 50px;\n  width: 500px;\n  height: 500px;\n  background-color: var(--main-color);\n}\n\n.today-forecast * {\n  font-size: 1.6rem;\n  text-align: center;\n  color: var(--white-text);\n}\n\n.condition-icon {\n  width: 80px;\n  height: 80px;\n}\n\n.temperature {\n  font-size: 3.4rem;\n  font-weight: bold;\n}\n\n.current-weather {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  gap: 10px;\n}\n\n.current-weather-city {\n  font-weight: bold;\n  font-size: 1.8rem;\n}\n\n.current-weather-details {\n  display: flex;\n  margin-top: auto;\n  justify-content: space-between;\n}\n\n.current-weather-details img {\n  width: 25px;\n  height: 25px;\n}\n\n.container > p {\n  font-size: 1rem;\n}\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://weather-app/./src/styles.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_render__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/render */ \"./src/js/render.js\");\n/* harmony import */ var _js_weather_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/weather-api */ \"./src/js/weather-api.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _assets_cloudy_day_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/cloudy-day.png */ \"./src/assets/cloudy-day.png\");\n\n\n\n\n\nconst randomDiv = document.querySelector(\".random-div\")\nrandomDiv.textContent = \"Hello!\"\n\n/* getForecast(\n  \"https://api.weatherapi.com/v1/forecast.json?key=d774c4dd991f41beb38162439243006&q=london&days=3\"\n).then(console.log)\n\nconsole.log(\n  `Current: ${getForecast(\n    \"https://api.weatherapi.com/v1/current.json?key=d774c4dd991f41beb38162439243006&q=london\"\n  ).then(console.log)}`\n) */\n\n;(0,_js_weather_api__WEBPACK_IMPORTED_MODULE_1__.getForecast)().then(console.log)\n\n;(0,_js_render__WEBPACK_IMPORTED_MODULE_0__.renderCurrentForecast)()\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_render__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/render */ \"./src/js/render.js\");\n/* harmony import */ var _js_weather_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/weather-api */ \"./src/js/weather-api.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/logo.png */ \"./src/assets/logo.png\");\n/* harmony import */ var _assets_icons_sunny_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/icons/sunny.png */ \"./src/assets/icons/sunny.png\");\n/* harmony import */ var _assets_icons_wind_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/icons/wind.png */ \"./src/assets/icons/wind.png\");\n/* harmony import */ var _assets_icons_pressure_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icons/pressure.png */ \"./src/assets/icons/pressure.png\");\n/* harmony import */ var _assets_icons_drops_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/icons/drops.png */ \"./src/assets/icons/drops.png\");\n/* harmony import */ var _assets_icons_umbrella_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/icons/umbrella.png */ \"./src/assets/icons/umbrella.png\");\n\n\n\n\n\n\n\n\n\n\nconst randomDiv = document.querySelector(\".random-div\")\nrandomDiv.textContent = \"Hello!\"\n\n/* getForecast(\n  \"https://api.weatherapi.com/v1/forecast.json?key=d774c4dd991f41beb38162439243006&q=london&days=3\"\n).then(console.log)\n\nconsole.log(\n  `Current: ${getForecast(\n    \"https://api.weatherapi.com/v1/current.json?key=d774c4dd991f41beb38162439243006&q=london\"\n  ).then(console.log)}`\n) */\n\n;(0,_js_weather_api__WEBPACK_IMPORTED_MODULE_1__.getForecast)().then(console.log)\n\n;(0,_js_render__WEBPACK_IMPORTED_MODULE_0__.renderCurrentForecast)()\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ }),
 
@@ -150,13 +150,63 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/assets/cloudy-day.png":
+/***/ "./src/assets/icons/drops.png":
+/*!************************************!*\
+  !*** ./src/assets/icons/drops.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"0ed94795318148912007.png\";\n\n//# sourceURL=webpack://weather-app/./src/assets/icons/drops.png?");
+
+/***/ }),
+
+/***/ "./src/assets/icons/pressure.png":
+/*!***************************************!*\
+  !*** ./src/assets/icons/pressure.png ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"4ae7331c1c2f690dbf39.png\";\n\n//# sourceURL=webpack://weather-app/./src/assets/icons/pressure.png?");
+
+/***/ }),
+
+/***/ "./src/assets/icons/sunny.png":
+/*!************************************!*\
+  !*** ./src/assets/icons/sunny.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"12820694f2e5ac4256f3.png\";\n\n//# sourceURL=webpack://weather-app/./src/assets/icons/sunny.png?");
+
+/***/ }),
+
+/***/ "./src/assets/icons/umbrella.png":
+/*!***************************************!*\
+  !*** ./src/assets/icons/umbrella.png ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"aa01ddc90e9a90ac92d1.png\";\n\n//# sourceURL=webpack://weather-app/./src/assets/icons/umbrella.png?");
+
+/***/ }),
+
+/***/ "./src/assets/icons/wind.png":
 /*!***********************************!*\
-  !*** ./src/assets/cloudy-day.png ***!
+  !*** ./src/assets/icons/wind.png ***!
   \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"30aa7135206f25d306b0.png\";\n\n//# sourceURL=webpack://weather-app/./src/assets/cloudy-day.png?");
+eval("module.exports = __webpack_require__.p + \"866bbb06849c23cb0ddd.png\";\n\n//# sourceURL=webpack://weather-app/./src/assets/icons/wind.png?");
+
+/***/ }),
+
+/***/ "./src/assets/logo.png":
+/*!*****************************!*\
+  !*** ./src/assets/logo.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"24ddf52185ec770ad118.png\";\n\n//# sourceURL=webpack://weather-app/./src/assets/logo.png?");
 
 /***/ })
 

@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -12,13 +18,13 @@
         <a href="#">
           <img
             class="logo-img"
-            src="./assets/cloudy-day.png"
+            src="./assets/logo.png"
             alt="logo with clouds and sun"
         /></a>
         <a href="#"><div class="logo-text">Weather App</div></a>
       </div>
       <div class="location">
-        <div class="location-descr">Current weather in:</div>
+        <div class="location-descr">Show weather in:</div>
         <div class="location-city">Hamburg</div>
       </div>
       <div class="measurment">
@@ -26,10 +32,55 @@
         <div class="measurment-fahrenheit">Fahrenheit</div>
       </div>
     </nav>
+    <div id="content">
+      <div class="today-forecast">
+        <div class="current-weather">
+          <div class="current-weather-city">Hamburg</div>
+          <div class="current-weather-descr">Current weather:</div>
+          <div class="current-weather-main">
+            <div class="wrapper">
+              <p class="temperature">+33</p>
+              <img class="condition-icon" src="./assets/sunny.png" alt="" />
+            </div>
+            <p class="condition">Sunny</p>
+            <div class="feelslike">
+              Feels like: <span class="feelslike-temp">+31</span
+              ><span class="measurment metric">C</span>
+            </div>
+          </div>
+        </div>
+        <div class="current-weather-details">
+          <div class="container">
+            <img src="./assets/wind.png" alt="" class="wind-icon" />
+            <p class="wind">11.2 km/h</p>
+          </div>
+          <div class="container">
+            <img src="./assets/drops.png" alt="" class="humidity-icon" />
+            <p class="humidity">78 %</p>
+          </div>
+          <div class="container">
+            <img src="./assets/umbrella.png" alt="" class="rain-chance-icon" />
+            <p class="rain-chance">18 %</p>
+          </div>
+          <div class="container">
+            <img src="./assets/pressure.png" alt="" class="pressure-icon" />
+            <p class="pressure">29.94 mb</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="random-div"></div>
     <footer>
       <a href="https://www.flaticon.com/packs/weather-385" title="weather icons"
         >Weather icons created by kosonicon - Flaticon</a
+      >
+      <a href="https://www.flaticon.com/packs/weather-242" title="wind icons"
+        >Wind icons created by Freepik - Flaticon</a
+      >
+      <a
+        href="https://www.flaticon.com/free-icons/pressure"
+        title="pressure icons"
+        >Pressure icons created by Muhammad Ali - Flaticon</a
       >
     </footer>
   </body>

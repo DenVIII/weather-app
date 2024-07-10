@@ -16,6 +16,7 @@
   -webkit-transition: 0.2s;
   transition: 0.2s;
   list-style: none;
+  font-family: "Noto Sans";
 }
 
 /* Navbar */
@@ -80,4 +81,68 @@ a {
 
 .divider {
   display: inline;
+}
+
+/* Todays forecast */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 15px;
+}
+
+.today-forecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 70px;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 500px;
+  height: 500px;
+  background-color: var(--main-color);
+}
+
+.today-forecast * {
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--white-text);
+}
+
+.condition-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.temperature {
+  font-size: 3.4rem;
+  font-weight: bold;
+}
+
+.current-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.current-weather-city {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.current-weather-details {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+}
+
+.current-weather-details img {
+  width: 25px;
+  height: 25px;
+}
+
+.container > p {
+  font-size: 1rem;
 }

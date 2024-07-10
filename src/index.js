@@ -1,7 +1,12 @@
 import { renderCurrentForecast } from "./js/render"
 import { getForecast } from "./js/weather-api"
 import "./styles.css"
-import "./assets/cloudy-day.png"
+import "./assets/logo.png"
+import "./assets/icons/sunny.png"
+import "./assets/icons/wind.png"
+import "./assets/icons/pressure.png"
+import "./assets/icons/drops.png"
+import "./assets/icons/umbrella.png"
 
 const randomDiv = document.querySelector(".random-div")
 randomDiv.textContent = "Hello!"
