@@ -1,8 +1,14 @@
 :root {
-  --main-color: #82b7df;
+  --background-color: linear-gradient(
+    38deg,
+    rgba(242, 247, 247, 1) 0%,
+    rgb(41, 234, 238) 63%,
+    #0ef7d4 100%
+  );
+  --main-color: #a6cff0;
   --text-color: #1e1f1d;
   --white-text: white;
-  --accent-color: #ea2b1f;
+  --accent-color: #124c7c;
 }
 
 *,
@@ -18,6 +24,31 @@
   list-style: none;
   font-family: "Noto Sans";
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(62, 204, 233, 0.3);
+  border: solid 13px transparent;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border: solid 13px transparent;
+  border-radius: 4px;
+}
+
+h2 {
+  text-align: center;
+  color: var(--white-text);
+}
+
+/* body {
+  background: var(--background-color);
+} */
 
 /* Navbar */
 
@@ -157,4 +188,40 @@ a {
 
 .container > p {
   font-size: 1rem;
+}
+
+/*Hourly Forecast*/
+
+.hourly-forecast {
+  width: 500px;
+  height: 300px;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--main-color);
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.hourly-forecast > .main {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-color: red orange;
+  scrollbar-width: thin;
+  gap: 50px;
+  height: 125px;
+}
+
+.main > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 60px;
+}
+
+.condition-icon {
+  width: 40px;
+  height: 40px;
 }

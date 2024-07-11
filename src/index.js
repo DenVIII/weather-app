@@ -9,6 +9,7 @@ import "./assets/icons/drops.png"
 import "./assets/icons/umbrella.png"
 import "./assets/icons/celsius.png"
 import "./assets/icons/fahrenheit.png"
+import "./assets/icons/crescent-moon.png"
 
 const randomDiv = document.querySelector(".random-div")
 randomDiv.textContent = "Hello!"
