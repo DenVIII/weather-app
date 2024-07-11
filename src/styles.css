@@ -153,12 +153,12 @@ a {
   color: var(--white-text);
 }
 
-.condition-icon {
+.main-condition-icon {
   width: 80px;
   height: 80px;
 }
 
-.temperature {
+.main-temperature {
   font-size: 3.4rem;
   font-weight: bold;
 }
@@ -192,7 +192,8 @@ a {
 
 /*Hourly Forecast*/
 
-.hourly-forecast {
+.hourly-forecast,
+.daily-forecast {
   width: 500px;
   height: 300px;
   padding: 40px 50px;
@@ -204,13 +205,14 @@ a {
   margin-top: 20px;
 }
 
-.hourly-forecast > .main {
+.main {
   display: flex;
-  overflow-x: scroll;
-  scrollbar-color: red orange;
-  scrollbar-width: thin;
   gap: 50px;
   height: 125px;
+}
+
+.hourly-forecast > .main {
+  overflow-x: scroll;
 }
 
 .main > .container {
@@ -224,4 +226,14 @@ a {
 .condition-icon {
   width: 40px;
   height: 40px;
+}
+
+/*Daily forecast*/
+
+.daily-forecast > .main {
+  justify-content: space-between;
+}
+
+.daily-forecast > .main > .container {
+  height: 120px;
 }
