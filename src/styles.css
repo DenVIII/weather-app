@@ -46,6 +46,10 @@ h2 {
   color: var(--white-text);
 }
 
+.hidden {
+  display: none;
+}
+
 /* body {
   background: var(--background-color);
 } */
@@ -105,6 +109,15 @@ a {
 .location-city {
   font-size: 1.8rem;
   font-weight: bold;
+}
+
+.location-city:hover {
+  cursor: pointer;
+  background-color: var(--accent-color);
+}
+
+.location-input {
+  width: 100%;
 }
 
 .measurment {
