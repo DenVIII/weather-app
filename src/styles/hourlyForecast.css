@@ -1,0 +1,35 @@
+.hourly-forecast,
+.daily-forecast {
+  width: 500px;
+  height: 300px;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--main-color);
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.main {
+  display: flex;
+  gap: 50px;
+  height: 125px;
+}
+
+.hourly-forecast > .main {
+  overflow-x: scroll;
+}
+
+.main > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 60px;
+}
+
+.condition-icon {
+  width: 40px;
+  height: 40px;
+}

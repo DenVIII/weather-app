@@ -1,7 +1,12 @@
 import { renderCurrentForecast } from "./js/render"
-import { getForecast } from "./js/weather-api"
-import { showLocationInput, hideLocationInput } from "./js/dom"
-import "./styles.css"
+import { changeCity, getForecast } from "./js/weather-api"
+import { showLocationInput, hideLocationInput, setCitySetting } from "./js/dom"
+import "./styles/base.css"
+import "./styles/dailyForecast.css"
+import "./styles/footer.css"
+import "./styles/hourlyForecast.css"
+import "./styles/navbar.css"
+import "./styles/todaysForecast.css"
 import "./assets/logo.png"
 import "./assets/icons/sunny.png"
 import "./assets/icons/wind.png"
@@ -16,7 +21,14 @@ const locationInput = document.querySelector(".location-input")
 const locationCity = document.querySelector(".location-city")
 
 locationCity.addEventListener("click", showLocationInput)
-locationInput.addEventListener("keypress", hideLocationInput)
+locationInput.addEventListener("keypress", refreshPage)
+console.log("start")
+
+function refreshPage(e) {
+  if (e.which !== 13) return
+  changeCity()
+  hideLocationInput()
+}
 /* getForecast(
   "https://api.weatherapi.com/v1/forecast.json?key=d774c4dd991f41beb38162439243006&q=london&days=3"
 ).then(console.log)

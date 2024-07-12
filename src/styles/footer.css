@@ -1,0 +1,22 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 10px 0;
+  min-height: 40px;
+  width: 100%;
+  background-color: var(--main-color);
+  font-family: "Roboto", sans-serif;
+}
+
+.credits {
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--accent-color);
+}

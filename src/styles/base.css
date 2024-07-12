@@ -1,0 +1,51 @@
+:root {
+  --background-color: linear-gradient(
+    38deg,
+    rgba(242, 247, 247, 1) 0%,
+    rgb(41, 234, 238) 63%,
+    #0ef7d4 100%
+  );
+  --main-color: #a6cff0;
+  --text-color: #1e1f1d;
+  --white-text: white;
+  --accent-color: #124c7c;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border-collapse: collapse;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  list-style: none;
+  font-family: "Noto Sans";
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(62, 204, 233, 0.3);
+  border: solid 13px transparent;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border: solid 13px transparent;
+  border-radius: 4px;
+}
+
+h2 {
+  text-align: center;
+  color: var(--white-text);
+}
+
+.hidden {
+  display: none;
+}

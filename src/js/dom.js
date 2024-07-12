@@ -6,10 +6,11 @@ function showLocationInput(e) {
   locationInput.classList.remove("hidden")
 }
 
-function hideLocationInput(e) {
-  if (e.which !== 13) return
+function hideLocationInput() {
   const locationInput = document.querySelector(".location-input")
   const locationCity = document.querySelector(".location-city")
+
+  locationInput.value = ""
 
   locationCity.classList.remove("hidden")
   locationInput.classList.add("hidden")

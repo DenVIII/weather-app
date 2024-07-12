@@ -1,0 +1,7 @@
+.daily-forecast > .main {
+  justify-content: space-between;
+}
+
+.daily-forecast > .main > .container {
+  height: 120px;
+}
