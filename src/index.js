@@ -1,6 +1,11 @@
 import { renderCurrentForecast } from "./js/render"
-import { changeCity, getForecast } from "./js/weather-api"
-import { showLocationInput, hideLocationInput, setCitySetting } from "./js/dom"
+import { getForecast } from "./js/weather-api"
+import {
+  showLocationInput,
+  hideLocationInput,
+  changeCity,
+  changeCurrentWeather,
+} from "./js/dom"
 import "./styles/base.css"
 import "./styles/dailyForecast.css"
 import "./styles/footer.css"
@@ -22,11 +27,14 @@ const locationCity = document.querySelector(".location-city")
 
 locationCity.addEventListener("click", showLocationInput)
 locationInput.addEventListener("keypress", refreshPage)
-console.log("start")
 
 function refreshPage(e) {
   if (e.which !== 13) return
   changeCity()
+  getForecast().then((data) => {
+    changeCurrentWeather(data)
+    console.log(data)
+  })
   hideLocationInput()
 }
 /* getForecast(
