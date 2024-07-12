@@ -6,6 +6,7 @@ import {
   changeCity,
   changeCurrentWeather,
   changeHourlyWeather,
+  changeDailyForecast,
 } from "./js/dom"
 import "./styles/base.css"
 import "./styles/dailyForecast.css"
@@ -35,6 +36,7 @@ function refreshPage(e) {
   getForecast().then((data) => {
     changeCurrentWeather(data)
     changeHourlyWeather(data)
+    changeDailyForecast(data)
     console.log(data)
   })
   hideLocationInput()

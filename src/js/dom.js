@@ -51,8 +51,26 @@ function changeHourlyWeather(data) {
     const icon = container.querySelector(".condition-icon")
 
     time.textContent = hour.time.split(" ")[1]
-    temperature.textContent = hour["temp_c"]
+    temperature.textContent = `${hour["temp_c"]} C`
     icon.src = hour.condition.icon
+  })
+}
+
+function changeDailyForecast(data) {
+  const containers = document.querySelectorAll(
+    ".daily-forecast>.main>.container"
+  )
+  const dailyForecastData = data.forecast.forecastday
+
+  dailyForecastData.forEach((day, index) => {
+    const container = containers[index]
+    const date = container.querySelector(".date")
+    const temperature = container.querySelector(".temperature")
+    const icon = container.querySelector(".condition-icon")
+
+    date.textContent = day.date.split("-").reverse().join("/")
+    temperature.textContent = `${day.day["avgtemp_c"]} C`
+    icon.src = day.day.condition.icon
   })
 }
 
@@ -80,4 +98,5 @@ export {
   changeCity,
   changeCurrentWeather,
   changeHourlyWeather,
+  changeDailyForecast,
 }
