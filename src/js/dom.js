@@ -38,6 +38,24 @@ function changeCurrentWeather(data) {
   pressure.textContent = `${data.current.pressure_in}`
 }
 
+function changeHourlyWeather(data) {
+  const containers = document.querySelectorAll(
+    ".hourly-forecast>.main>.container"
+  )
+  const hourlyForecastData = data.forecast.forecastday[0].hour
+
+  hourlyForecastData.forEach((hour, index) => {
+    const container = containers[index]
+    const time = container.querySelector(".hour")
+    const temperature = container.querySelector(".temperature")
+    const icon = container.querySelector(".condition-icon")
+
+    time.textContent = hour.time.split(" ")[1]
+    temperature.textContent = hour["temp_c"]
+    icon.src = hour.condition.icon
+  })
+}
+
 function changeCity() {
   const locationInput = document.querySelector(".location-input")
   const locationCity = document.querySelector(".location-city")
@@ -61,4 +79,5 @@ export {
   showLocationInput,
   changeCity,
   changeCurrentWeather,
+  changeHourlyWeather,
 }
