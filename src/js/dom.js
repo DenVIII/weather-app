@@ -1,3 +1,22 @@
+let isMetric = true
+
+function changeMeasurmentSystem() {
+  const measurmentCelsius = document.querySelector(".measurment-celsius")
+  const measurmentFahrenheit = document.querySelector(".measurment-fahrenheit")
+  const measurmentIcon = document.querySelector(".measurment.icon")
+
+  measurmentCelsius.classList.toggle("active")
+  measurmentFahrenheit.classList.toggle("active")
+
+  if (isMetric) {
+    measurmentIcon.src = "assets/fahrenheit.png"
+    isMetric = false
+  } else {
+    measurmentIcon.src = "assets/celsius.png"
+    isMetric = true
+  }
+}
+
 function showLocationInput(e) {
   const locationInput = document.querySelector(".location-input")
   const locationCity = document.querySelector(".location-city")
@@ -28,14 +47,29 @@ function changeCurrentWeather(data) {
   const pressure = document.querySelector(".pressure")
 
   currentCity.textContent = data.location["name"]
-  currentTemperature.textContent = data.current["temp_c"]
+  currentTemperature.textContent = `${
+    isMetric ? data.current["temp_c"] + " C" : data.current["temp_f"] + " F"
+  }`
   conditionIcon.src = data.current.condition.icon
+  conditionIcon.alt = `${data.current.condition.text} icon`
   condition.textContent = data.current.condition.text
-  feelsLike.textContent = `${data.current["feelslike_c"]} C`
-  wind.textContent = `${data.current["wind_kph"]} km/h`
+  feelsLike.textContent = `${
+    isMetric
+      ? data.current["feelslike_c"] + " C"
+      : data.current["feelslike_f"] + " F"
+  }`
+  wind.textContent = `${
+    isMetric
+      ? data.current["wind_kph"] + " km/h"
+      : data.current["wind_mph"] + " m/h"
+  }`
   humidity.textContent = `${data.current.humidity} %`
   rainChance.textContent = `${data.forecast.forecastday[0].day.daily_chance_of_rain} %`
-  pressure.textContent = `${data.current.pressure_in}`
+  pressure.textContent = `${
+    isMetric
+      ? data.current.pressure_mb + " mb"
+      : data.current.pressure_in + " in²"
+  }`
 }
 
 function changeHourlyWeather(data) {
@@ -51,7 +85,9 @@ function changeHourlyWeather(data) {
     const icon = container.querySelector(".condition-icon")
 
     time.textContent = hour.time.split(" ")[1]
-    temperature.textContent = `${hour["temp_c"]} C`
+    temperature.textContent = `${
+      isMetric ? hour["temp_c"] + " C" : hour["temp_f"] + " F"
+    }`
     icon.src = hour.condition.icon
   })
 }
@@ -69,7 +105,9 @@ function changeDailyForecast(data) {
     const icon = container.querySelector(".condition-icon")
 
     date.textContent = day.date.split("-").reverse().join("/")
-    temperature.textContent = `${day.day["avgtemp_c"]} C`
+    temperature.textContent = `${
+      isMetric ? day.day["avgtemp_c"] + " C" : day.day["avgtemp_f"] + " F"
+    }`
     icon.src = day.day.condition.icon
   })
 }
@@ -99,4 +137,5 @@ export {
   changeCurrentWeather,
   changeHourlyWeather,
   changeDailyForecast,
+  changeMeasurmentSystem,
 }

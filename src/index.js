@@ -1,12 +1,9 @@
-import { renderCurrentForecast } from "./js/render"
-import { getForecast } from "./js/weather-api"
+import { refreshPage } from "./js/render"
 import {
   showLocationInput,
   hideLocationInput,
   changeCity,
-  changeCurrentWeather,
-  changeHourlyWeather,
-  changeDailyForecast,
+  changeMeasurmentSystem,
 } from "./js/dom"
 import "./styles/base.css"
 import "./styles/dailyForecast.css"
@@ -26,19 +23,19 @@ import "./assets/icons/crescent-moon.png"
 
 const locationInput = document.querySelector(".location-input")
 const locationCity = document.querySelector(".location-city")
+const measurment = document.querySelector(".measurment")
 
 locationCity.addEventListener("click", showLocationInput)
-locationInput.addEventListener("keypress", refreshPage)
+locationInput.addEventListener("keypress", processUserInput)
+measurment.addEventListener("click", changeMeasurmentSystem)
+measurment.addEventListener("click", refreshPage)
 
-function refreshPage(e) {
+refreshPage()
+
+function processUserInput(e) {
   if (e.which !== 13) return
   changeCity()
-  getForecast().then((data) => {
-    changeCurrentWeather(data)
-    changeHourlyWeather(data)
-    changeDailyForecast(data)
-    console.log(data)
-  })
+  refreshPage()
   hideLocationInput()
 }
 /* getForecast(

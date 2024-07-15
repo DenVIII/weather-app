@@ -1,4 +1,9 @@
 import { getForecast } from "./weather-api"
+import {
+  changeCurrentWeather,
+  changeHourlyWeather,
+  changeDailyForecast,
+} from "./dom"
 
 async function renderCurrentForecast() {
   const result = await getForecast()
@@ -7,4 +12,13 @@ async function renderCurrentForecast() {
   div.textContent = `Current temperature: ${result.current.temp_c} C`
 }
 
-export { renderCurrentForecast }
+function refreshPage() {
+  getForecast().then((data) => {
+    changeCurrentWeather(data)
+    changeHourlyWeather(data)
+    changeDailyForecast(data)
+    console.log(data)
+  })
+}
+
+export { renderCurrentForecast, refreshPage }
