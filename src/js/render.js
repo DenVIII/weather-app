@@ -3,6 +3,7 @@ import {
   changeCurrentWeather,
   changeHourlyWeather,
   changeDailyForecast,
+  changeCityName,
 } from "./dom"
 
 async function renderCurrentForecast() {
@@ -12,13 +13,16 @@ async function renderCurrentForecast() {
   div.textContent = `Current temperature: ${result.current.temp_c} C`
 }
 
-function refreshPage() {
-  getForecast().then((data) => {
-    changeCurrentWeather(data)
-    changeHourlyWeather(data)
-    changeDailyForecast(data)
-    console.log(data)
-  })
+async function refreshPage() {
+  try {
+    const forecastData = await getForecast()
+    changeCurrentWeather(forecastData)
+    changeHourlyWeather(forecastData)
+    changeDailyForecast(forecastData)
+    changeCityName(forecastData)
+  } catch (error) {
+    throw error
+  }
 }
 
 export { renderCurrentForecast, refreshPage }

@@ -21,6 +21,8 @@ function showLocationInput(e) {
   const locationInput = document.querySelector(".location-input")
   const locationCity = document.querySelector(".location-city")
 
+  locationInput.placeholder = "City name"
+
   locationCity.classList.add("hidden")
   locationInput.classList.remove("hidden")
 }
@@ -112,6 +114,11 @@ function changeDailyForecast(data) {
   })
 }
 
+function changeCityName(data) {
+  const locationCity = document.querySelector(".location-city")
+  locationCity.textContent = data.location.name
+}
+
 function changeCity() {
   const locationInput = document.querySelector(".location-input")
   const locationCity = document.querySelector(".location-city")
@@ -124,10 +131,15 @@ function changeCity() {
       .replace(/(,\s+)/g, ",") // remove any white space that follows a comma
       .replace(/(\s+,)/g, ",") // remove any white space that preceeds a comma
       .replace(/\s+/g, "+") // replace any remaining white space with +, so it works in api call
-    locationCity.textContent = cityName[0].toUpperCase() + cityName.slice(1)
     return cityName
   }
   return locationCity.textContent
+}
+
+function showErrorMessage() {
+  const locationInput = document.querySelector(".location-input")
+  locationInput.value = ""
+  locationInput.placeholder = "Invalid input!"
 }
 
 export {
@@ -138,4 +150,6 @@ export {
   changeHourlyWeather,
   changeDailyForecast,
   changeMeasurmentSystem,
+  changeCityName,
+  showErrorMessage,
 }

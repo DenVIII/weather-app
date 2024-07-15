@@ -1,10 +1,15 @@
 import { apiKey, forecastDays, city } from "./settings"
 
 async function getForecast(url = generateUrl()) {
-  const result = await fetch(url, { mode: "cors" })
-  const forecast = await result.json()
-
-  return forecast
+  try {
+    const result = await fetch(url, { mode: "cors" })
+    const forecast = await result.json()
+    console.log(forecast)
+    return forecast
+  } catch (error) {
+    console.error("Error getting forecast:", error)
+    throw error
+  }
 }
 
 function generateUrl() {
@@ -12,9 +17,12 @@ function generateUrl() {
 }
 
 function getCity() {
-  const locationCity = document.querySelector(".location-city")
-
-  return locationCity.textContent
+  const locationInput = document.querySelector(".location-input")
+  let locationCity = locationInput.value
+  if (locationInput.classList.contains("hidden")) {
+    locationCity = document.querySelector(".location-city").textContent
+  }
+  return locationCity
 }
 
 export { getForecast }
